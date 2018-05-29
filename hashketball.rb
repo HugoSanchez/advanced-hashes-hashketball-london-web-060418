@@ -202,12 +202,13 @@ def player_stats(player_name)
   player_stats
 end
 
-def big_shoe_rebounds(player_name)
+def big_shoe_rebounds
 
-  player_stats = {}
+  rebounds = nil
   
   game_hash.each do |location, team_data|
     team_data[:players].each do |players_data|
+      for players_data[:shoe]
       if players_data[:name] == player_name
         players_data.delete(:name)
         player_stats = players_data 
