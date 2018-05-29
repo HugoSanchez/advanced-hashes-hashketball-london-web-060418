@@ -189,7 +189,6 @@ end
 
 def player_stats(player_name)
 
-  shoe_size = nil
   game_hash.each do |location, team_data|
     team_data[:players].each do |players_data|
       if players_data[:name] == player_name
