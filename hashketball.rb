@@ -192,9 +192,8 @@ def player_stats(player_name)
   game_hash.each do |location, team_data|
     team_data[:players].each do |players_data|
       if players_data[:name] == player_name
-        return players_data.except 
+        return players_data.except(:name) 
       end
     end
   end
-  shoe_size
 end
