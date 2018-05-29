@@ -201,3 +201,18 @@ def player_stats(player_name)
   end
   player_stats
 end
+
+def big_shoe_rebounds(player_name)
+
+  player_stats = {}
+  
+  game_hash.each do |location, team_data|
+    team_data[:players].each do |players_data|
+      if players_data[:name] == player_name
+        players_data.delete(:name)
+        player_stats = players_data 
+      end
+    end
+  end
+  player_stats
+end
